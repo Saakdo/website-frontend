@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keing Ruangruang Autoparts. We manufacture automobile parts and air compressor parts since 2001.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="styles.css" rel="stylesheet">
+    <title>Contact Us</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="home_button">
+            <input type="image" src="/images/logo.jpg" alt="logo" id="logo">
+        </a>
+        
+        <nav class="navbar" id="bar">
+            <a href="about.html" id="about-link">About</a>
+            <a href="gallery.html" id="gallery-link">Gallery</a>
+            <a href="product.html" id="products-link">Products</a>
+            <div class="dropdown">
+                <a href="contacts.html" id="contacts-link">Contacts</a>
+                <ul class="dropdown-menu">
+                    <li><a href="request.html" id="request-link">Request Our Service</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="lang_button">
+            <button class="translate" onclick="switchLanguage('en')">English</button>
+            <button class="translate" onclick="switchLanguage('th')">ไทย</button>
+        </div>
+        <div class="flags">
+            <a class="translate" onclick="switchLanguage('th')">
+                <img src="/images/thaiflag.png" alt="thai flag">
+            </a>
+            <a class="translate" onclick="switchLanguage('en')">
+                <img src="/images/americanflag.png" alt="american flag">
+            </a>
+        </div>
+    </header>
+
+    <div class="submission_form">
+        <h1 class="form_text" id="text1">Service Request</h1>
+        <h2 class="form_text" id="text2">If you require our services, please complete the submission form below, and a member of our team will be in touch with you promptly.</h2>
+        <br>
+        <p id="asterisk_sentence"><span class="asterisk">*</span> indicates required</p>
+        <div class="form">
+            <form action="submit.php" method="POST">
+                <label for="name">Name <span class="asterisk">*</span></label><br>
+                <input type="text" class="names" id="first_name" name="name1" placeholder="First" required><input type="text" class="names" id="last_name" name="name2" placeholder="Last" required>
+                <br><br>
+                <label for="address">Address <span class="asterisk">*</span></label><br>
+                <input type="text" class="addresses" id="street_address" name="address1" placeholder="Street Address" required><input type="text" class="addresses" id="second_address" name="address2" placeholder="Secondary Address" required><br>
+                <input type="text" id="city" name="city" placeholder="City" required><input type="text" id="province" name="province" placeholder="State / Province / Region" required><br>
+                <select id="country" name="country" required>
+                    <option value="au">Australia</option>
+                    <option value="br">Brazil</option>
+                    <option value="bn">Brunei</option>
+                    <option value="ca">Canada</option>
+                    <option value="kh">Cambodia</option>
+                    <option value="cn">China</option>
+                    <option value="fr">France</option>
+                    <option value="de">Germany</option>
+                    <option value="gb">United Kingdom</option>
+                    <option value="id">Indonesia</option>
+                    <option value="in">India</option>
+                    <option value="it">Italy</option>
+                    <option value="jp">Japan</option>
+                    <option value="kr">South Korea</option>
+                    <option value="la">Lao</option>
+                    <option value="my">Malaysia</option>
+                    <option value="mx">Mexico</option>
+                    <option value="mm">Myanmar</option>
+                    <option value="ph">Philippines</option>
+                    <option value="ru">Russia</option>
+                    <option value="sg">Singapore</option>
+                    <option value="za">South Africa</option>
+                    <option value="th">Thailand</option>
+                    <option value="us">United States</option>
+                    <option value="vn">Vietnam</option>
+                </select><input type="text" id="zip" name="zip" placeholder="ZIP / Postal Code">
+                <br><br>
+                <label for="email">Email <span class="asterisk">*</span></label><br>
+                <input type="text" id="email" name="email" placeholder="Email" required><br><br>
+                <label for="phone">Phone <span class="asterisk">*</span></label><br>
+                <input type="text" id="phone" name="phone" placeholder="Telephone number" required>
+                <br><br>
+                <label for="business">What is your company business?</label><br>
+                <input type="text" id="business" name="business"required><br><br>
+                <label for="comment">How can we help you? <span class="asterisk">*</span></label><br>
+                <textarea id="feedback" name="feedback" rows="5" cols="50" placeholder="..." required></textarea><br>
+                <button type="submit" id="subby">Submit</button>
+            </form>
+        </div>
+    </div>
+    <script src="languages.js"></script>
+</body>
+</html>

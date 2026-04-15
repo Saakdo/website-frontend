@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keing Ruangruang Autoparts. We manufacture automobile parts and air compressor parts since 2001.">
+    <meta name="robots" content="noindex, nofollow">
+    <link href="styles.css" rel="stylesheet">
+    <title>Gallery</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="home_button">
+            <input type="image" src="/images/logo.jpg" alt="logo" id="logo">
+        </a>
+        
+        <nav class="navbar" id="bar">
+            <a href="about.html" id="about-link">About</a> <!-- Link back to your main page -->
+            <a href="gallery.html" id="gallery-link">Gallery</a>
+            <a href="product.html" id="products-link">Products</a>
+            <div class="dropdown">
+                <a href="contacts.html" id="contacts-link">Contacts</a>
+                <ul class="dropdown-menu">
+                    <li><a href="request.html" id="request-link">Request Our Service</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="lang_button">
+            <button class="translate" onclick="switchLanguage('en')">English</button>
+            <button class="translate" onclick="switchLanguage('th')">ไทย</button>
+        </div>
+        <div class="flags">
+            <a href="#">
+                <img src="/images/thaiflag.png">
+            </a>
+            <a href="#">
+                <img src="/images/americanflag.png">
+            </a>
+        </div>
+    </header>
+
+    <div class="introduction">
+        <h1 id="galleryh1">What Is in Store</h1>
+    </div>
+
+    <div class="gallery">
+        <div class="carousel">
+            <img src="/images/g28.webp" class="slide" alt="rong1">
+            <img src="/images/fac5.webp" class="slide" alt="frontpic">
+            <img src="/images/fac2.webp" class="slide" alt="corridor">
+        </div>
+        <div class="carousel2">
+            <img src="/images/g3.webp" class="slide" alt="rong3">
+            <img src="/images/g4.webp" class="slide" alt="rong4">
+            <img src="/images/dad.webp" class="slide" alt="dad">
+        </div>
+        <div class="carousel3">
+            <img src="/images/g6.webp" class="slide" alt="worker">
+            <img src="/images/g17.webp" class="slide" alt="workers">
+            <img src="/images/g22.webp" class="slide" alt="robot2">
+        </div>
+        <div class="carousel4">
+            <img src="/images/solar1.jpg" class="slide5img" alt="solar1">
+            <img src="/images/solar2.jpg" class="slide5img" alt="solar2">
+            <img src="/images/solar3.jpg" class="slide5img" alt="solar3">
+            <img src="/images/solar4.jpg" class="slide5img" alt="solar4">
+            <img src="/images/solar5.jpg" class="slide5img" alt="solar5">
+        </div>
+    </div>
+    <div class="container">
+        <div class="image_container">
+            <img src="/images/g2.JPG" alt="1">
+            <img src="/images/g5.JPG" alt="2">
+            <img src="/images/g7.JPG" alt="3">
+            <img src="/images/g8.JPG" alt="4">
+            <img src="/images/g9.JPG" alt="5">
+            <img src="/images/g10.JPG" alt="6">
+            <img src="/images/g11.JPG" alt="7">
+            <img src="/images/g13.JPG" alt="8">
+            <img src="/images/g14.JPG" alt="9">
+            <img src="/images/g15.JPG" alt="10">
+            <img src="/images/g23.JPG" alt="11">
+            <img src="/images/g24.JPG" alt="12">
+            <img src="/images/g30.JPG" alt="13">
+            <img src="/images/g36.JPG" alt="14">
+            <img src="/images/g37.JPG" alt="15">
+            <img src="/images/g38.JPG" alt="16">
+            <img src="/images/g40.JPG" alt="17">
+            <img src="/images/g41.JPG" alt="18">
+            <img src="/images/g42.JPG" alt="19">
+            <img src="/images/g43.JPG" alt="20">
+            <img src="/images/g44.JPG" alt="21">
+            <img src="/images/g45.JPG" alt="22">
+            <img src="/images/g46.JPG" alt="23">
+            <img src="/images/g47.JPG" alt="24">
+            <img src="/images/g48.JPG" alt="25">
+            <img src="/images/g49.JPG" alt="26">
+            <img src="/images/g51.JPG" alt="27">
+            <img src="/images/g52.JPG" alt="28">
+            <img src="/images/g53.JPG" alt="29">
+            <img src="/images/g55.JPG" alt="30">
+        </div>
+    </div>
+
+<script>
+    window.onload = function() {
+        const savedLanguage = localStorage.getItem('selectedLanguage') || 'en';  // Default to 'en' if no language is saved
+        switchLanguage(savedLanguage);  // Call the function to switch language after loading
+    };
+</script>
+
+<script src="/languages.js"></script>
+</body>
+</html>

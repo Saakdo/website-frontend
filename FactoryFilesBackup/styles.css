@@ -1,0 +1,1349 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.2s linear; 
+}
+
+html {
+    font-size: 16px;
+    font-family: 'My_Lato_reg';
+    color: #fae3cf;
+    scroll-behavior: smooth;
+    
+}
+
+body {
+    background-color:#0a0f24;
+}
+
+
+h1 {
+    font-family: 'My_Lato_bold';
+    
+}
+
+
+
+
+@font-face {
+    font-family: 'My_Lato';
+    src: url(/fonts/Lato/Lato-Black.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'My_Lato_reg';
+    src: url(/fonts/Lato/Lato-Regular.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'My_Lato_bold';
+    src: url(/fonts/Lato/Lato-Bold.ttf) format(truetype);
+}
+@font-face {
+    font-family: 'My_Lato_italic';
+    src: url(/fonts/Lato/Lato-LightItalic.ttf);
+}
+@font-face {
+    font-family: 'My_Lato_thin';
+    src: url(/fonts/Lato/Lato-Thin.ttf);
+}
+
+.header, .header2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 0 5px 1px black;
+    transition: all 0.3s ease; /* Smooth shrinking transition */
+}
+
+.header {
+    background: white;
+}
+
+.header2 {
+    background: black;
+    background-image: url(/images/g30new.JPG);
+    background-size: cover;
+    background-position: top;
+}
+
+.header.shrink, .header2.shrink {
+    padding: 1px 50px; /* Reduced padding for a compact look */
+    box-shadow: 0 0 3px 1px black; 
+}
+
+#logo {
+    width: 150px; /* Shrink the logo when the navbar shrinks */
+    transition: width 0.3s ease; /* Smooth transition for the logo size */
+}
+
+.header.shrink #logo, .header2.shrink #logo {
+    width: 120px; /* Reduced logo size */
+}
+
+.header2.black-bg {
+    background: #02012e;
+    transition: background 0.3s ease;
+}
+
+
+
+.home_button {
+    margin-left: 20px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#logo {
+    width: 200px;
+    border: black 2px solid;
+    display: block;
+}
+
+
+
+.navbar a {
+    position: relative;
+    font-family: 'My_Lato_reg';
+    font-size: 24px;
+    color: #bb2233;
+    font-weight: 400;
+    text-decoration: none;
+    margin-left: 40px;
+    transition: font-size 0.3s ease; /* Smooth font resizing */
+}
+.header.shrink .navbar a {
+    font-size: 20px; /* Reduced font size when shrunk */
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'My_Lato_reg';
+    font-size: 24px;
+    color: #bb2233;
+    font-weight: 400;
+    text-decoration: none;
+    
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+.lang_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0; 
+    padding: 10px; /* optional, for spacing */
+  }
+  
+.lang_button button {
+    margin: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+
+.general {
+    margin-top: 144px;
+    min-height: 80vh;
+    max-height: fit-content;
+    background-image: url(/images/fac5new.jpg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+}
+
+.general_text {
+    text-align: right;
+    color: #0a0f24;
+    margin-right: 30px;
+    
+}
+#quality {
+    font-family: 'My_Lato_italic';
+    color: #bb2233;
+    text-decoration: underline;
+}
+
+.quote {
+
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fae3cf;
+    padding: 8px;
+    text-align: left;
+    font-size: 0.5rem;
+    z-index: 10;
+
+}
+blockquote {
+    font-size: 0.9rem;
+    font-family: 'My_Lato_reg';
+    margin-left: 30px;
+    margin-top: 2px;
+}
+
+.info_board {
+ 
+    padding: 5px 20px;
+    min-height: 80vh;
+    max-height: 80vh;
+    line-height: 1.7;
+    font-family: 'My_Lato';
+    
+}
+.info-lists {
+    font-family: 'My_Lato_reg';
+    font-weight: 10px;
+}
+#board {
+    scroll-margin-top: 152px;
+}
+#dad {
+    width: 40%;
+    height: auto;
+    float: right;
+    border: 2px white solid;
+    box-shadow: 0 0 5px 2px white;
+}
+#mail {
+    color: #bb2233;
+}
+#map {
+    color: #bb2233;
+}
+.superscript {          /* Superscripts */
+    font-size: 0.7em;
+    vertical-align: super;
+}
+
+
+.customers {
+    padding: 5px 20px;
+    min-height: 80vh;
+    max-height: 80vh;
+    background-color: #bb2233;
+}
+#cus {
+    font-family: 'My_Lato';
+}
+#customer_img {
+    margin-top: 15px;
+    width: 70%;
+    height: auto;
+}
+
+.products {
+    padding: 5px 20px;
+    min-height: 80vh;
+    line-height: 1.7;
+}
+#prdlist {
+    scroll-margin-top: 152px;
+    font-family: 'My_Lato';
+}
+#wheels {
+    font-family: 'My_Lato_thin';
+}
+#agri {
+    font-family: 'My_Lato_thin';
+}
+.auto_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#img_auto1 {
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+}
+#img_auto2 {
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+    float: right;
+}
+#img_auto3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 70%;
+    height: auto;
+}
+#img_auto4 {
+    margin-top: 20px;
+    width: 70%;
+    height: auto;
+}
+.air_images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#air1 {
+    margin-top: 20px;
+    width: 60%;
+    height: auto;
+}
+#air2 {
+    margin-top: 20px;
+    width: 40%;
+    height: auto;
+    float: right;
+}
+#machine1 {
+    margin-top: 20px;
+    width: 70%;
+    height: auto;
+}
+.littleparts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#jigs1 {
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+}
+#jigs2 {
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+}
+/* About.html Section */
+
+.story {
+    min-height: 45vh;
+    max-height: fit-content;
+    background-color: white;
+    background-image: url(/images/g30new.JPG);
+    background-size: cover;
+    background-position: top;
+    text-align: left;
+    padding-top: 205px; /* Push content lower */
+}
+
+#storytitle {
+    
+    color: white; /* Keep it visible on the background */
+    font-size: 2rem; /* Adjust as needed */
+    margin-left: 50px;
+}
+
+.about {
+    min-height: 100vh;
+    background-color: white;
+    padding-top: 60px;
+    padding-left: 250px;
+    padding-right: 250px;
+    line-height: 1.5;
+    
+}
+
+#about_p1 {
+    color: black;
+    font-family: 'My_Lato';
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+#about_p2 {
+    color: black;
+    font-size: 0.8rem;
+    
+}
+#about_p3 {
+    color: black;
+    font-size: 0.8rem;
+}
+#about_p4 {
+    color: black;
+    font-size: 0.8rem;
+}
+.about ul {
+    color: black;
+    font-size: 0.8rem;
+}
+
+.spotlight {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    
+    gap: 70px;
+    background-color: white;
+    justify-content: center;
+    
+    
+}
+
+.spotlight img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border: 2px solid;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
+}
+
+
+
+
+
+
+/**********************/
+/* Gallery.html Section*/
+
+.introduction {
+    margin-top: 144px;
+    min-height: 80vh;
+    max-height: fit-content;
+    background-image: url(/images/butterflynew.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.introduction h1 {
+    color: #bb2233;
+}
+.gallery {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+}
+
+#gallery_h1 {
+    color: #bb2233;
+    font-family: 'My_Lato_italic';
+    
+}
+.carousel {
+    position: relative;
+    width: 100%;
+    min-height: 700px;
+
+    margin-top: 30px;
+    overflow: hidden;
+    float: left;
+}
+.carousel2 {
+    position: relative;
+    width: 100%;
+    
+    min-height: 700px;
+    margin-top: 10px;
+    overflow: hidden;
+    float: left;
+}
+.carousel3 {
+    position: relative;
+    width: 100%;
+    
+    min-height: 800px;
+    margin-top: 10px;
+    overflow: hidden;
+    float: left;
+}
+.carousel4 {
+    position: relative;
+    width: 100%;
+    
+    min-height: 800px;
+    margin-top: 10px;
+    overflow: hidden;
+    float: left;
+}
+.slide {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    animation: fade 24s infinite;
+}
+.slide:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide:nth-child(2) {
+    animation-delay: 8s;
+}
+
+.slide:nth-child(3) {
+    animation-delay: 16s;
+}
+.slide5img {
+    width: 100%;
+    height: auto;
+    opacity: 0;
+    position: absolute;
+    animation: fade2 40s infinite;
+}
+.slide5img:nth-child(1) {
+    animation-delay: 0s;
+}
+.slide5img:nth-child(2) {
+    animation-delay: 8s;
+}
+.slide5img:nth-child(3) {
+    animation-delay: 16s;
+}
+.slide5img:nth-child(4) {
+    animation-delay: 24s;
+}
+.slide5img:nth-child(5) {
+    animation-delay: 32s;
+}
+@keyframes fade {
+    0%, 30% { opacity: 1; }   
+    40%, 100% { opacity: 0; }
+}
+@keyframes fade2 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.container {
+    padding: 2rem 5%;
+    overflow-y: auto;
+    overflow-x: auto;
+}
+.container .image_container {   
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 1rem;
+}
+.image_container img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 2px solid lightgrey;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    margin-top: 15px;
+    padding: 1% 10%;
+    line-height: 1.5;
+    font-family: 'My_Lato_thin';
+    font-size: 0.8rem;
+    background-color:darkgreen;
+}
+.alt_symbols {
+    padding: 0;
+    margin: 0;
+}
+
+#alt_logo {
+    width: 15%;
+    height: auto;
+    margin-right: 10px;
+}
+#alt_cert {
+    width: 10%;
+    height: auto;
+}
+
+#site {
+    color:crimson
+    
+}
+#site:hover {
+    color:salmon;
+}
+#site:active {
+    color: white;
+}
+#mail2 {
+    color: crimson;
+}
+#mail2:hover {
+    color: salmon;
+}
+#mail2:active {
+    color: white;
+}
+
+#mailkeing {
+    color: blue;
+}
+#mailkeing:hover {
+    color: cornflowerblue;
+}
+/****************************/
+/*** Product.html section ***/
+.select {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: grey;
+    margin-top: 144px;
+    min-height: 80vh;
+    max-height: 80vh;
+    padding: 5px 20px;
+    background-image: url(/images/Factory_Website_Images/Spare\ parts\ together\ new.JPG);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+}
+#proh1 {
+    color: black;
+    text-decoration: solid;
+}
+.category {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid;
+    width: 35%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    background-color: #0a0f24;
+}
+
+.category a:hover{
+    color:deepskyblue;
+}
+/***************************/
+
+/*** Automotive.html ***/
+
+.slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 144px 15px 5px;
+    border: solid red 1px;
+    padding: 10px;
+}
+#auto_wheels {
+    font-family: 'My_Lato_bold';
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    gap: 10px;
+    
+}
+.grid2 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: 10px;
+}
+.grid img, .grid2 img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with transparency */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Caption text */
+#caption {
+    margin: auto;
+    display: block;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 20px;
+    font-size: 16px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Fade-in effect for the modal */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.sub-category {
+    margin-left: 100px;
+    font-family: 'My_Lato_thin'
+}
+.sub-category2 {
+    margin-left: 100px;
+    margin-bottom: 10px;
+    font-family: 'My_Lato_thin'
+
+}
+/*** Contacts.html section ***/
+
+.card {
+    margin-top: 144px;
+    display: flex;
+    width: 80%;
+    height: auto;
+    border: 1px red solid;
+    flex-direction: column;
+    
+}
+.card_info {
+    display: flex;
+    margin-top: 20px;
+    padding: 10px;
+    gap: 25px;
+    width: 80%;
+    height: auto;
+    border: 1px red dashed;
+    font-family: 'My_Lato_italic';
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+
+/* Services Request Section */
+
+.submission_form {
+    margin-top: 150px;
+}
+.form_text {
+    margin-left: 15px;
+    padding-bottom: 8px;
+}
+#text1 {
+    font-family: 'My_Lato_reg';
+}
+#text2 {
+    font-family: 'My_Lato_italic';
+    font-size: 1rem;
+}
+#asterisk_sentence {
+    font-size: 0.7rem;
+    font-family: 'My_Lato_italic';
+    margin-left: 15px;
+}
+.asterisk {
+    color: red;
+}
+
+
+.form {
+    margin: 15px;
+    padding: 10px;
+    border: white solid thin;
+}
+.names {
+    width: 300px;
+    height: 30px;
+}
+#last_name {
+    margin-left: 18px;
+}
+
+.addresses {
+    width: 550px;
+    height: 30px;
+}
+#second_address {
+    margin-left: 18px;
+}
+#city {
+    margin-top: 15px;
+    width: 266px;
+    height: 30px;
+}
+#province {
+    margin-top: 15px;
+    margin-left: 18px;
+    width: 266px;
+    height: 30px;
+}
+#country {
+    margin-top: 15px;
+    width: 265px;
+    font-size: 1rem;
+}
+#zip {
+    margin-top: 15px;
+    margin-left: 19px;
+    width: 265px;
+    height: 30px;
+    font-size: 1rem;
+}
+#email {
+    margin-top: 15px;
+    width: 266px;
+    height: 30px;
+}
+#ad {
+    font-family: 'My_Lato_thin';
+    font-size: 0.8rem;
+    
+}
+#phone {
+    margin-top: 15px;
+    width: 266px;
+    height: 30px;
+}
+#business {
+    margin-top: 15px;
+    width: 266px;
+    height: 30px;
+}
+#feedback {
+    margin-top: 15px;
+    width: 550px;
+    height: 100px;
+    font-size: 0.7rem;
+}
+#subby {
+    width: 100px;
+    height: 20px;
+}
+
+/***************************/
+
+/* Thankyou.html Section */
+
+.thankyou {
+    margin-top: 144px;
+    min-height: 80vh;
+}
+
+.thankyou_component {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+}
+
+#dadthanks {
+    width: 22%;
+    height: auto;
+    border: #bb2233 solid thin;
+    box-shadow: 0 0 5px 1px red;
+    object-fit: contain;
+}
+
+/***************************/
+
+/* HDMI Viewport */
+
+@media (min-width: 1441px) {
+    html {
+        font-size: 1.5rem;
+    }
+    input::placeholder {
+        font-size: 18px;
+    }
+
+    .navbar {
+        margin-right: 30px;
+    }
+    
+    .flags {
+        display: none;
+    }
+
+    .quote {
+        position: absolute;
+        bottom: 3.5%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fae3cf;
+        padding: 8px;
+        text-align: left;
+        font-size: 0.5rem;
+        z-index: 10;
+    }
+}
+
+/* Macbook Pro Viewport */
+@media (min-width: 1440px) {
+    html {
+        font-size: 1.5rem;
+    }
+    input::placeholder {
+        font-size: 18px;
+    }
+
+    .navbar {
+        margin-right: 30px;
+    }
+    
+    .flags {
+        display: none;
+    }
+
+    .quote {
+        position: absolute;
+        bottom: 3.5%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fae3cf;
+        padding: 8px;
+        text-align: left;
+        font-size: 0.5rem;
+        z-index: 10;
+    }
+}
+/*  iPad Landscape Viewport */
+@media (min-width: 1024px) and (max-width: 1439px) {
+    html {
+        font-size: 1.4rem;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1px 5px;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        box-shadow: 0 0 5px 1px black;
+    }
+    
+    .navbar {
+        display: flex;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    .navbar a {
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+
+    .home_button {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    #logo {
+        width: 40px;
+        display: block;
+        border: black 1px solid;
+    }
+
+    .lang_button {
+        display: none;
+    }
+
+    .flags {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0; 
+        padding: 2px;
+    }
+
+    .flags img {
+        width: 10px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .general {
+        margin-top: 9.5%;
+    }
+
+    .general {
+        margin-top: 5%;
+    }
+
+    .quote {
+        position: absolute;
+        bottom: 12%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fae3cf;
+        padding: 12px;
+        text-align: center;
+        font-size: 0.6rem;
+        z-index: 10;
+    }
+
+    .introduction {
+        margin-top: 4%;
+        min-height: 80vh;
+        max-height: fit-content;
+        background-image: url(/images/butterflynew.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+@media (min-width: 771px) and (max-width: 1023px) {
+    html {
+        font-size: 1.5rem;
+    }
+    input::placeholder {
+        font-size: 18px;
+    }
+
+    .navbar {
+        margin-right: 30px;
+    }
+    
+    .flags {
+        display: none;
+    }
+
+    .quote {
+        position: absolute;
+        bottom: 3.5%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fae3cf;
+        padding: 8px;
+        text-align: left;
+        font-size: 0.5rem;
+        z-index: 10;
+    }
+}
+
+/* iPad Portrait Viewport */
+@media (max-width: 770px) {
+    html {
+        font-size: 12px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1px 5px;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        box-shadow: 0 0 5px 1px black;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 5px;
+    }
+
+    .home_button {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    #logo {
+        width: 40px;
+        display: block;
+        border: black 1px solid;
+    }
+
+    .lang_button {
+        display: none;
+    }
+
+    .flags {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0; 
+        padding: 2px;
+    }
+
+    .flags img {
+        width: 10px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .general {
+        margin-top: 5%;
+        
+    }
+
+    .quote {
+        position: absolute;
+        bottom: 13%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fae3cf;
+        padding: 8px;
+        text-align: left;
+        font-size: 0.5rem;
+        z-index: 10;
+    }
+    .introduction {
+        margin-top: 5%;
+        min-height: 80vh;
+        max-height: fit-content;
+        background-image: url(/images/butterflynew.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .introduction h1 {
+        font-size: 4rem;
+    }
+
+    .carousel {
+        position: relative;
+        width: 100%;
+        min-height: 500px;
+    
+        margin-top: 30px;
+        overflow: hidden;
+        float: left;
+    }
+    .carousel2 {
+        position: relative;
+        width: 100%;
+        
+        min-height: 500px;
+        margin-top: 10px;
+        overflow: hidden;
+        float: left;
+    }
+    .carousel3 {
+        position: relative;
+        width: 100%;
+        
+        min-height: 500px;
+        margin-top: 10px;
+        overflow: hidden;
+        float: left;
+    }
+    .carousel4 {
+        position: relative;
+        width: 100%;
+        
+        min-height: 500px;
+        margin-top: 10px;
+        overflow: hidden;
+        float: left;
+    }
+}
+
+/* iPhone Viewport */
+@media (max-width: 430px) {
+    html {
+        font-size: 12px;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1px 5px;
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+        box-shadow: 0 0 5px 1px black;
+    }
+
+    .navbar {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    .navbar a {
+        font-size: 12px;
+        margin-left: 5px;
+        margin-right: 5px;
+        padding: 5px;
+    }
+
+    .home_button {
+        margin-left: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    #logo {
+        width: 40px;
+        display: block;
+        border: black 1px solid;
+    }
+
+    .lang_button {
+        display: none;
+    }
+
+    .flags {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0; 
+        padding: 2px;
+    }
+
+    .flags img {
+        width: 10px;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .general {
+        margin-top: 9.5%;
+    }
+
+    .quote {
+        position: absolute;
+        bottom: 15%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fae3cf;
+        padding: 8px;
+        text-align: left;
+        font-size: 0.5rem;
+        z-index: 10;
+    }
+
+    .introduction {
+        margin-top: 9%;
+        min-height: 80vh;
+        max-height: fit-content;
+        background-image: url(/images/butterflynew.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .introduction h1 {
+        font-size: 4rem;
+    }
+    .carousel {
+        position: relative;
+        width: 100%;
+        min-height: 250px;
+    
+        margin-top: 30px;
+        overflow: hidden;
+        float: left;
+    }
+    .carousel2 {
+        position: relative;
+        width: 100%;
+        
+        min-height: 250px;
+        margin-top: 10px;
+        overflow: hidden;
+        float: left;
+    }
+    .carousel3 {
+        position: relative;
+        width: 100%;
+        
+        min-height: 250px;
+        margin-top: 10px;
+        overflow: hidden;
+        float: left;
+    }
+    .carousel4 {
+        position: relative;
+        width: 100%;
+        
+        min-height: 250px;
+        margin-top: 10px;
+        overflow: hidden;
+        float: left;
+    }
+}
+
